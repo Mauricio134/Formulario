@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{%block heading%}
+REGISTRARSE
+{%endblock%}
+{%block body%}
+{% if error %} <p class=error><strong>Error:</strong> {{ errorMessage }} {% endif %}
+<form action="{{ url_for('register') }}" method="post">
+    <h3>Nombres: <input type="text" name="name" placeholder="Ingresa tus Nombres"></h3>
+    <h3>Apellidos: <input type="text" name="surname" placeholder="Ingresa tus Apellidos"></h3>
+    <h3>Fecha de Nacimiento: <input type="date" name="born"></h3>
+    <h3>Teléfono o Celular: <input type="number" name="cell" placeholder="Ingresa tu Teléfono o Celular"></h3>
+    <h3>DNI: <input type="number" name="dni" placeholder="Ingresa tu DNI"></h3>
+    <h3>Gmail: <input type="email" name="email" placeholder="Ingresa tu Correo Electrónico"></h3>
+    <h3>Contraseña: <input type="password" name="password" placeholder="Ingresa tu Contraseña"></h3>
+    <h3>Confirmar Contraseña: <input type="password" name="password_confirm" placeholder="Volver a ingresar tu Contraseña"></h3>
+    <br>
+    <button>Registrarse</button>
+</form>
+{%endblock%}

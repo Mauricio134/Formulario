@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{%block heading%}
+REGISTRO DE INFORMACIÓN
+{%endblock%}
+{%block body%}
+<h2>Bienvenido, es momento de registrarse para poder conocernos mejor.</h2>
+<form action="{{ url_for('formu') }}" method="post">
+    <button>Iniciar</button>
+</form>
+{%endblock%}
